@@ -15,7 +15,7 @@ function checkGuess() {
             title: "Good job!",
             text: "You guess the correct number!",
             icon: "success"
-            // imageUrl: "images/happy.gif",
+            // imageUrl: "https://media.tenor.com/7Q2Y4n1YvVAAAAAi/happy-cat.gif",
             // imageWidth: 150,
             // imageHeight: 150,
             // imageAlt: "Happy sticker",
