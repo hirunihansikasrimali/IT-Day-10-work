@@ -23,26 +23,28 @@ function checkGuess() {
         });
         console.log("Correct  u guess the correct number!");
 
-    } else if (userGuessNum > randomNumber) {
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Too high! Try again!",
-            // footer: "<a href=\"#\">Why do I have this issue?</a>"
-        });
-        console.log("Too high. try again!");
-
-    } else if (userGuessNum < randomNumber) {
+    } else{
+        attempts--;
+    if (attempts > 0) {
+        if (userGuessNum > randomNumber) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Too high! Try again!",
+            });
+            console.log("Too high. try again!");
+        }else{
         Swal.fire({
             icon: "error",
             title: "Oops...",
             text: "Too low! Try again!",
-            // footer: "<a href=\"#\">Why do I have this issue?</a>"
+            
         });
         console.log("Too low. try again!");
+        }
+    }else{
+        console.log("u lost! the correct number was " + randomNumber);
     }
-    else {
-        console.log("u lost! the correct number was" + randomNumber);
     }
 }
 
