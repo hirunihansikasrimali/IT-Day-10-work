@@ -5,7 +5,7 @@ randomNumber = (Math.floor(Math.random() * 10 + 1));
 console.log(randomNumber);
 
 function checkGuess() {
-    const userGuessNum = (document.getElementById("userGuess").value);
+    const userGuessNum = Number(document.getElementById("userGuess").value);
 
     // const result=(document.getElementById("printresult").value);
     console.log(userGuessNum);
