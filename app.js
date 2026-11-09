@@ -7,7 +7,7 @@ console.log(randomNumber);
 function checkGuess() {
     const userGuessNum = Number(document.getElementById("userGuess").value);
 
-    // const result=(document.getElementById("printresult").value);
+    const result=(document.getElementById("printresult").value);
     console.log(userGuessNum);
 
     if (userGuessNum == randomNumber) {
