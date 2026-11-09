@@ -45,7 +45,7 @@ function checkGuess() {
         }else{
              Swal.fire({
                     icon: "error",
-                    title: "Oops...",
+                    title: "Game Over...",
                     text: "u lost! the correct number was " + randomNumber,
             
                 });
