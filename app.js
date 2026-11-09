@@ -25,33 +25,31 @@ function checkGuess() {
 
     } else{
         attempts--;
-    if (attempts > 0) {
-        if (userGuessNum > randomNumber) {
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Too high! Try again!",
-            });
-            console.log("Too high. try again!");
-        }else{
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Too low! Try again!",
+        if (attempts > 0) {
+            if (userGuessNum > randomNumber) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Too high! Try again!",
+                });
+                console.log("Too high. try again!");
+            }else{
+                 Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Too low! Try again!",
             
-        });
-        console.log("Too low. try again!");
+                });
+                console.log("Too low. try again!");
+            }
+        }else{
+             Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "u lost! the correct number was " + randomNumber,
+            
+                });
+            console.log("u lost! the correct number was " + randomNumber);
         }
-    }else{
-        console.log("u lost! the correct number was " + randomNumber);
-    }
     }
 }
-
-
-// function theGame(){
-// let randomNumber;
-
-// randomNumber=(Math.floor(Math.random()*10+1));
-// console.log(randomNumber);
-// }
